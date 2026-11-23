@@ -1,0 +1,18 @@
+{
+  "source": "SimWhy Case 003B, 2026-10-20 final scientific verdict, section A; scalar sums from baseline_geometry_native_assessment.json",
+  "sourceSha256": "30ad31da39cf6e27d3f3b40a9a174312416fb142a0da48d68e0ea810312603fb",
+  "kind": "selected scalar diagnostics from a real Fluent checkpoint",
+  "iteration": 6537,
+  "scaledContinuityResidual": 0.0008974343495021303,
+  "massTolerancePercent": 0.1,
+  "inwardBoundaryFluxKgPerSecondPerMetre": {
+    "capture": 13.462015524152227,
+    "wallA": 0,
+    "wallB": 0,
+    "ductOutlet": -13.675961081862148,
+    "wallC": 0,
+    "outerInlet": 7.085266229268347,
+    "outerBoundary": -2.497727201455306,
+    "wakeOutlet": -4.587455014677019
+  }
+}

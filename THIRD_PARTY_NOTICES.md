@@ -1,0 +1,6 @@
+# Sources and rights
+
+- Coverage follows the synthetic profile defined by [cfd-profile-audit at 657a81d](https://github.com/hengyuhang61-creator/cfd-profile-audit/blob/657a81d888186e89a5ff30d83cd2c8b1453a179b/src/cfd_profile_audit/cli.py), copyright 2026 Heng Yuhang, [MIT](https://github.com/hengyuhang61-creator/cfd-profile-audit/blob/657a81d888186e89a5ff30d83cd2c8b1453a179b/LICENSE).
+- Conservation includes selected scalar results from the project author's SimWhy Case 003B scientific verdict and native-read assessment dated 2026-10-20. [case003b.json](site/case003b.json) records the assessment filename and SHA-256. Native Fluent files, geometry, solver logs and proprietary code are excluded. [Public SimWhy PR #6 methodology](https://github.com/yuhangheng/simwhy/blob/a9c1578d043418ba1871030189d4067fe904401e/docs/coupling_evidence.md) describes a related protocol and a separate synthetic example.
+- Deployment summarizes the October 28, 2026 private Personal OS Stage 3 handover. The public text omits paths, logs, operational identifiers and actual build IDs. The executable fixture uses invented IDs and has no access to the real application.
+- The cover and GIF are captures of this project. System fonts have not been bundled.

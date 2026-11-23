@@ -1,0 +1,11 @@
+# SolverFails
+
+**每项检查都通过了，结果还是错的。**
+
+[打开交互案例集](https://hengyuhang61-creator.github.io/solverfails/) · [版本发布](https://github.com/hengyuhang61-creator/solverfails/releases/latest) · [反馈](https://github.com/hengyuhang61-creator/solverfails/issues/new)
+
+- 剖面末端钳制让 RMSE 变成 0，计算剖面仅覆盖 21 个参考点中的 13 个。可在浏览器切换评分方式和样本数。
+- Fluent 真实检查点的连续性缩放残差低于 0.001，完整边界的质量不平衡仍为 1.0408%。可根据标量摘录重新计账。
+- Personal OS 的历史交付记录显示候选构建成功，安装入口仍是旧版本。公开演示用合成版本号重现交付验收错误。
+
+本地运行指令见[英文 README](README.md)。来源、脱敏边界和许可见[说明](THIRD_PARTY_NOTICES.md)。
