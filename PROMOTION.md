@@ -1,21 +1,21 @@
-# SolverFails launch copy
+# SolverFails launch material
 
-## English
+## English project introduction
 
-**SolverFails — a casebook of false positives.** Everything passed. The result was still wrong.
+**For CFD and software reviewers: catch a false pass before you sign off.** Replay a Mach 5 SU2 checkpoint pair. First test the global mass budget and see it pass. Then check the wall feature and watch the result change to `HOLD_WALL_DRIFT`. The two separations are 7.20 mm apart even though both mass imbalances are below 0.004%.
 
-A zero RMSE hid eight missing points. A Fluent checkpoint had a low residual and an open mass budget. A tested candidate never reached the installed app. SolverFails gives each case an evidence trail and a runnable check.
+The four cases also cover profile comparison support, a Fluent mass budget and installed-version verification. Each case includes the source boundary and a command that reproduces its disposition. The public Mach 5 case supplies the exact crossing coordinates, the threshold and the matching restart fingerprint.
 
-[Try the casebook](https://hengyuhang61-creator.github.io/solverfails/) · [v0.1.0](https://github.com/hengyuhang61-creator/solverfails/releases/tag/v0.1.0)
+[Replay the Mach 5 case](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html) · [Repository and CLI](https://github.com/hengyuhang61-creator/solverfails) · [Releases](https://github.com/hengyuhang61-creator/solverfails/releases/latest)
 
-## 中文
+## 中文项目介绍
 
-**SolverFails — 可复现的失败案例集。** 每项检查都通过了，结果还是错的。
+**给做 CFD 和软件验收的人：在签字前发现误判。** 重放两个 Mach 5 SU2 检查点。先单独核对质量预算，再加上壁面分离漂移检查。两份结果的质量误差均低于 0.004%，分离点却相差 7.20 mm。第二次核验给出 `HOLD_WALL_DRIFT`。
 
-零 RMSE 掩盖八个缺失点，低残差掩盖质量不守恒，候选测试通过却没有更新已安装程序。三个案例均提供证据和可运行的核验。
+案例集还包括剖面样本覆盖、Fluent 边界质量预算及安装版本探测。每个案例都标明证据范围，并提供可重复运行的命令。Mach 5 案例公开分离与再附坐标、门槛以及连接两份状态的重启哈希。
 
-[打开交互案例集](https://hengyuhang61-creator.github.io/solverfails/) · [v0.1.0](https://github.com/hengyuhang61-creator/solverfails/releases/tag/v0.1.0)
+[重放 Mach 5 案例](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html) · [源码和命令行](https://github.com/hengyuhang61-creator/solverfails) · [版本](https://github.com/hengyuhang61-creator/solverfails/releases/latest)
 
-## Technical community draft
+## Third-party community draft
 
-What do a zero RMSE, a low CFD residual and a green build have in common? Each can be numerically true while the conclusion is wrong. In SolverFails, you can toggle the coverage rule, recompute the mass budget and probe two simulated installed builds. Have a similarly small counterexample? Share the signal that passed and the evidence that changed the verdict. [Casebook](https://hengyuhang61-creator.github.io/solverfails/) · [Issues](https://github.com/hengyuhang61-creator/solverfails/issues)
+**Draft.** Both Mach 5 checkpoints pass the global mass screen. The skin-friction zero still moves upstream by 7.20 mm. SolverFails lets you run each check on the same data and shows why the convergence decision changes. Which local quantity do you watch in addition to your global balance? [Try the replay](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html)

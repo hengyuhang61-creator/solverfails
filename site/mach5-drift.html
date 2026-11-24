@@ -8,8 +8,13 @@
 <p class="lede">A controlled SU2 continuation had less than 0.004% total mass imbalance at both saved states. Between them, the separated region moved upstream by 7.20 mm at its leading edge.</p>
 <section class="console evidence"><h2>Run both checks</h2>
 <div class="metrics"><div>Mass error at 3,200 iterations<strong>0.00345%</strong><small>Working limit 0.1%</small></div><div>Largest wall-edge shift<strong>7.20 mm</strong><small>Working limit 1 mm</small></div></div>
+<div class="drift-track" aria-label="Separated wall intervals measured along the plate">
+<div><span>1,700 iterations</span><i style="left:35.43%;right:12.97%"></i></div>
+<div><span>3,200 iterations</span><i style="left:21.03%;right:10.89%"></i></div>
+<small><span>305 mm</span><span>355 mm</span></small>
+</div>
 <div class="controls"><button id="drift-mass">Check mass only</button><button id="drift-both">Check mass and wall</button></div><output id="drift-output" aria-live="polite"></output></section>
 <h2>What happened</h2><p>Both Mach 5 fields used the same 37,275-cell grid and adiabatic SST-2003m setup with the Wilcox correction. The 3,200-iteration state continued from the 1,700-iteration restart. The bottom-wall skin-friction zero moved from x = 322.72 to 315.52 mm. Reattachment moved from 348.51 to 349.55 mm.</p>
 <h2>What the checks establish</h2><p>The boundary balance measures net mass, and the skin-friction crossings locate a local flow feature. In these two saved fields the mass test passed and both crossings exceeded the 1 mm stability tolerance. This failure applies to the selected iteration window and closure. The eventual settled location and physical accuracy remain open.</p>
-<h2>Replay</h2><pre><code>node checks.mjs mach5-drift</code></pre><p>The program reports <code>HOLD_WALL_DRIFT</code> and exits 1. <a href="mach5-drift.json">Inspect values and restart fingerprints</a> · <a href="https://hengyuhang61-creator.github.io/machatlas/research.html">View native fields, methods and run receipts</a></p>
+<h2>Replay</h2><pre><code>node checks.mjs mach5-drift</code></pre><p>The program reports <code>HOLD_WALL_DRIFT</code> and exits 1. <a href="mach5-drift.json">Inspect values and restart fingerprints</a> · <a href="https://hengyuhang61-creator.github.io/machatlas/research.html#discrepancy">Compare the settled plain-SST fields in MachAtlas</a></p>
 </article></main><footer><span>SolverFails</span><a href="https://github.com/hengyuhang61-creator/solverfails/issues/new">Report an issue ↗</a></footer></body></html>

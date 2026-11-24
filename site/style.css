@@ -42,3 +42,4 @@ footer{margin-top:41px;padding:17px 0 25px;border-top:1px solid var(--line);colo
 @media(max-width:860px){.hero{grid-template-columns:1fr;gap:23px;padding:45px 0}.cards{grid-template-columns:1fr}.lede{max-width:55ch}}
 @media(max-width:480px){.bar,main,footer{width:calc(100% - 32px)}.bar{height:58px}nav,footer{gap:13px}.hero,.case{padding-top:34px}.console{padding:13px}.plot i,.plot b{width:5px;height:5px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.drift-track{padding:.55rem 0 1rem}.drift-track>div{position:relative;border-bottom:1px solid #8e8173;padding:0 0 .35rem;margin-bottom:.55rem}.drift-track span,.drift-track small{font-size:.78rem}.drift-track i{position:absolute;bottom:-2px;height:4px;background:#ff9a66;border-radius:2px}.drift-track>div:nth-child(2) i{background:#f0ca71}.drift-track small{display:flex;justify-content:space-between}

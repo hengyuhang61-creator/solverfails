@@ -1,6 +1,6 @@
 # SolverFails
 
-**每项检查都通过了，结果还是错的。**
+**给做 CFD 和软件验收的人：重放一次由通过信号掩盖的真实失败。**
 
 [打开交互案例集](https://hengyuhang61-creator.github.io/solverfails/) · [版本发布](https://github.com/hengyuhang61-creator/solverfails/releases/latest) · [反馈](https://github.com/hengyuhang61-creator/solverfails/issues/new)
 
@@ -10,4 +10,4 @@
 
 本地运行指令见[英文 README](README.md)。来源、脱敏边界和许可见[说明](THIRD_PARTY_NOTICES.md)。
 
-新增 [Mach 5 原生案例](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html)。两个检查点的质量误差均低于 0.004%，分离位置仍移动 7.20 mm。
+从 [Mach 5 原生案例](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html)。先点击质量检查，再加入壁面检查。两个检查点的质量误差均低于 0.004%，分离位置仍移动 7.20 mm。
