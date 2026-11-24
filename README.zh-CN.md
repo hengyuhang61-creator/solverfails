@@ -9,3 +9,5 @@
 - Personal OS 的历史交付记录显示候选构建成功，安装入口仍是旧版本。公开演示用合成版本号重现交付验收错误。
 
 本地运行指令见[英文 README](README.md)。来源、脱敏边界和许可见[说明](THIRD_PARTY_NOTICES.md)。
+
+新增 [Mach 5 原生案例](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html)。两个检查点的质量误差均低于 0.004%，分离位置仍移动 7.20 mm。

@@ -1,4 +1,4 @@
-import { reference, coverage, conservation, delivery } from "./model.mjs";
+import { reference, coverage, conservation, delivery, mach5Drift } from "./model.mjs";
 
 function result(element, title, detail) {
   const line = document.createElement("small");
@@ -65,5 +65,24 @@ for (const [button, build] of [["#old-build", "stale"], ["#new-build", "promoted
     const audit = delivery(build);
     result(document.querySelector("#delivery-result"), audit.verdict,
       "Candidate " + audit.candidateBuild + " · Installed " + audit.probedBuild);
+  });
+}
+
+for (const button of ["#drift-mass", "#drift-both"]) {
+  document.querySelector(button)?.addEventListener("click", async () => {
+    const output = document.querySelector("#drift-output");
+    try {
+      const response = await fetch(new URL("./mach5-drift.json", import.meta.url));
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      const audit = mach5Drift(await response.json());
+      const mass = "Mass error across saves " + audit.massErrorPercent.map((x) => x.toFixed(5) + "%").join(" / ");
+      if (button === "#drift-mass") {
+        result(output, audit.massPass ? "MASS_BALANCE_MET" : "FAIL_MASS_BALANCE", mass);
+      } else {
+        result(output, audit.verdict, mass + " · Maximum crossing drift " + audit.driftMm.toFixed(2) + " mm");
+      }
+    } catch {
+      result(output, "Evidence could not be loaded", "Serve the site over HTTP and try again.");
+    }
   });
 }

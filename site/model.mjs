@@ -37,3 +37,25 @@ export function delivery(installedBuild) {
   return { candidateTests: "PASS", candidateBuild, probedBuild,
     verdict: candidateBuild === probedBuild ? "VERSION_MATCH" : "NOT_DEPLOYED" };
 }
+
+export function mach5Drift(record) {
+  const { earlier, later, massThresholdPercent, edgeThresholdMm } = record;
+  if (earlier.iterations >= later.iterations ||
+      !/^[a-f\d]{64}$/.test(earlier.restartSha256) ||
+      earlier.restartSha256 !== later.restartInputSha256 ||
+      ![massThresholdPercent, edgeThresholdMm].every((value) => Number.isFinite(value) && value > 0)) {
+    throw new RangeError("Two ordered, hash-linked checkpoints and positive tolerances are required.");
+  }
+  const massErrorPercent = [earlier, later].map(({ inlet, outlet, sepMm, reattachMm }) => {
+    if (![inlet, outlet, sepMm, reattachMm].every(Number.isFinite) ||
+        inlet <= 0 || outlet >= 0 || sepMm >= reattachMm) {
+      throw new RangeError("Invalid checkpoint fluxes or wall crossings.");
+    }
+    return Math.abs(inlet + outlet) / inlet * 100;
+  });
+  const driftMm = Math.max(Math.abs(later.sepMm - earlier.sepMm),
+    Math.abs(later.reattachMm - earlier.reattachMm));
+  const massPass = massErrorPercent.every((error) => error <= massThresholdPercent);
+  return { massErrorPercent, massPass, driftMm, verdict: !massPass ? "FAIL_MASS_BALANCE" :
+    driftMm <= edgeThresholdMm ? "CHECKS_MET" : "HOLD_WALL_DRIFT" };
+}

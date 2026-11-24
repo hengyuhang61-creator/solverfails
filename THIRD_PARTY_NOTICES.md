@@ -4,3 +4,5 @@
 - Conservation includes selected scalar results from the project author's SimWhy Case 003B scientific verdict and native-read assessment dated 2026-10-20. [case003b.json](site/case003b.json) records the assessment filename and SHA-256. Native Fluent files, geometry, solver logs and proprietary code are excluded. [Public SimWhy PR #6 methodology](https://github.com/yuhangheng/simwhy/blob/a9c1578d043418ba1871030189d4067fe904401e/docs/coupling_evidence.md) describes a related protocol and a separate synthetic example.
 - Deployment summarizes the October 28, 2026 private Personal OS Stage 3 handover. The public text omits paths, logs, operational identifiers and actual build IDs. The executable fixture uses invented IDs and has no access to the real application.
 - The cover and GIF are captures of this project. System fonts have not been bundled.
+
+- Mach 5 checkpoint scalars are original results from the [MachAtlas native SU2 study](https://hengyuhang61-creator.github.io/machatlas/research.html). The case includes only derived scalar evidence and restart fingerprints.

@@ -1,0 +1,10 @@
+{
+  "solver": "SU2 8.6.0, coarse 37,275-cell Mach 5 grid, SST-2003m + Wilcox",
+  "gridSha256": "942a5a493d4351028125ad0c2787a5e70e7f596672c3af3a8f9b45a7166e9989",
+  "massThresholdPercent": 0.1,
+  "edgeThresholdMm": 1,
+  "earlier": {"iterations":1700, "inlet":19.46424257, "outlet":-19.46346454, "sepMm":322.71693665329, "reattachMm":348.51311029212034,
+    "restartSha256":"360425d35919f68a01d4948ec71c94f13c931fc7022668fb52a1fc2556a63cc4"},
+  "later": {"iterations":3200, "inlet":19.46424257, "outlet":-19.46491453, "sepMm":315.5171300155436, "reattachMm":349.5536341812316,
+    "restartInputSha256":"360425d35919f68a01d4948ec71c94f13c931fc7022668fb52a1fc2556a63cc4"}
+}

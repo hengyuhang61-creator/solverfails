@@ -27,3 +27,10 @@ test("candidate tests can pass while the probed build is stale", () => {
   assert.equal(run(1, "deployment", "stale").verdict, "NOT_DEPLOYED");
   assert.equal(run(0, "deployment", "promoted").verdict, "VERSION_MATCH");
 });
+
+test("two hash-linked Mach 5 outputs pass the mass gate and fail local stationarity", () => {
+  const result = run(1, "mach5-drift");
+  assert.equal(result.massPass, true);
+  assert.equal(result.driftMm.toFixed(2), "7.20");
+  assert.equal(result.verdict, "HOLD_WALL_DRIFT");
+});
