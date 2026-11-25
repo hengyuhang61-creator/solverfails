@@ -5,4 +5,7 @@
 - Deployment summarizes the October 28, 2026 private Personal OS Stage 3 handover. The public text omits paths, logs, operational identifiers and actual build IDs. The executable fixture uses invented IDs and has no access to the real application.
 - The cover and GIF are captures of this project. System fonts have not been bundled.
 
+- Grid observations derive from Valeria Puzikova’s cfd-vv-suite, copyright 2026, under its [MIT license](https://github.com/vvp-cfd/cfd-vv-suite/blob/d428d076fad18b486947deb341bcf51773ecc24f/LICENSE). [Source and fixture](https://github.com/vvp-cfd/cfd-vv-suite/tree/d428d076fad18b486947deb341bcf51773ecc24f/tools). The fourth profile and paired checks were computed for SolverFails. No upstream solver fields or upstream package are redistributed.
+- The two clinic excerpts and authored survey record derive from ThinkCouncil, copyright 2026 Heng Yuhang, [MIT license](https://github.com/hengyuhang61-creator/thinkcouncil/blob/6eb6dc4d645a772aaacdbbaf197e1b09c4be8be6/LICENSE). The [archived outputs](https://github.com/hengyuhang61-creator/thinkcouncil/tree/6eb6dc4d645a772aaacdbbaf197e1b09c4be8be6/eval) report the runtime and model for each hearing. The full MIT permission notice is in the root LICENSE.
+
 - Mach 5 checkpoint scalars are original results from the [MachAtlas native SU2 study](https://hengyuhang61-creator.github.io/machatlas/research.html). The case includes only derived scalar evidence and restart fingerprints.

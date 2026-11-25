@@ -1,0 +1,59 @@
+{
+  "cfd_commit": "d428d076fad18b486947deb341bcf51773ecc24f",
+  "council_commit": "6eb6dc4d645a772aaacdbbaf197e1b09c4be8be6",
+  "profile_dy": [
+    0.2,
+    0.1,
+    0.05,
+    0.025
+  ],
+  "mesh_labels": [
+    0.05,
+    0.025,
+    0.0125
+  ],
+  "recorded": {
+    "quantity_index": 0,
+    "f1": 0.0036333507432894994,
+    "f2": 0.0009082951062292469,
+    "f3": 0.00022690339026742496,
+    "order_p": 1.9997293724331615,
+    "extrapolated_value": 0.004541929848424315,
+    "gci21": 0.31258305670491865
+  },
+  "fourth_L2": 5.67258475668566e-05,
+  "reference_points": 101,
+  "repair_limit": -2.8399890556911117e-07,
+  "hearings": [
+    {
+      "file": "eval/results.json",
+      "model": "Qwen3-8B Q4_K_M · llama.cpp b12681 Vulkan · reasoning budget 320",
+      "evidence": {
+        "id": "E2",
+        "text": "Access survey: 18% of respondents report no smartphone or unreliable data."
+      },
+      "text": "The stepped pilot demonstrates a 12% reduction in no-shows (E1), which is a concrete benefit, while the full rollout risks excluding 18% of patients (E2). The supplier’s cancellation flexibility (E3) allows adjustments, mitigating exclusion risks. However, the lack of a control group in E1 introduces uncertainty about causality.",
+      "refs": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "validator": "PASS"
+    },
+    {
+      "file": "eval/results-4b.json",
+      "model": "Qwen3-4B-Instruct-2507 Q4_K_M · llama.cpp b12681 Vulkan",
+      "evidence": {
+        "id": "E2",
+        "text": "Access survey: 18% of respondents report no smartphone or unreliable data."
+      },
+      "text": "The board’s explicit concern about excluding patients without smartphones necessitates a solution that preserves access. Evidence E2 shows 18% of patients lack smartphones or have unreliable data, making a full rollout risky. Evidence E1 reports a 12% reduction in no-shows in a two-week pilot, but without a control group, causality is unverified (E1 uncertainty). A stepped pilot mitigates this uncertainty by enabling real-world observation and adaptive scaling, aligning with the method of uncertainty-based decision-making (E1).",
+      "refs": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "validator": "PASS"
+    }
+  ]
+}

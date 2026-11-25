@@ -2,7 +2,17 @@
 
 **For verification reviewers: replay a passing signal that missed a real failure.**
 
-Start with two native Mach 5 SU2 checkpoints. Check total mass, then include wall drift. Both states pass the first check, while the wall separation point moves 7.20 mm. [Try the Mach 5 replay](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html).
+[Open the grid and survey cases](site/witnesses.html) in a local checkout, or run the following command from the repository root. Python 3.9+ and its standard library are sufficient.
+
+```sh
+python replay/witness.py
+```
+
+The released Poiseuille test accepts order 1.99973 while the reported continuum error is 0.00454193 against an analytical zero. Two recorded AI hearings cite the right survey but change its denominator. Compare each baseline with its independent check, its repair and a passing control. A quadrature stress case also shows where the revised numerical check fails.
+
+Run `python replay/witness.py summary` for false acceptances, false rejections and abstentions, or `python replay/witness.py json` for individual inputs and decisions. Unpack a source download and open `site/witnesses.html` directly for the offline interactive page. [Experimental design](replay/DESIGN.md) · [Source replay and limitations](replay/README.md) · [Submit a public pointer and receive case credit](CONTRIBUTING.md).
+
+The native Mach 5 replay compares two SU2 checkpoints. Both pass total mass checks while the separation point moves 7.20 mm. [Try the Mach 5 replay](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html).
 
 [Open the interactive casebook](https://hengyuhang61-creator.github.io/solverfails/) · [Release](https://github.com/hengyuhang61-creator/solverfails/releases/latest) · [Report an issue](https://github.com/hengyuhang61-creator/solverfails/issues/new) · [中文](README.zh-CN.md)
 

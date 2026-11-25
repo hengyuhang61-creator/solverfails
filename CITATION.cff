@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the specific SolverFails revision and the original sources listed for the case."
+title: SolverFails
+type: software
+authors:
+  - family-names: Heng
+    given-names: Yuhang
+repository-code: "https://github.com/hengyuhang61-creator/solverfails"
+license: MIT
