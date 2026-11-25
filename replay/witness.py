@@ -2,12 +2,16 @@
 import argparse
 import json
 import math
+import sys
 from collections import Counter, defaultdict
 from fractions import Fraction
 from itertools import product
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent / "skills/survey-denominator/scripts"))
+from survey_bounds import identified_range
+
 OBS = json.loads((HERE / "observations.json").read_text(encoding="utf8"))
 PASS, FAIL, UNKNOWN = "PASS", "FAIL", "UNKNOWN"
 
@@ -81,13 +85,7 @@ def survey_rule(cited, target, fraction, claim, n=None, total=None):
         return FAIL
     if target not in ("respondents","population") or claim is None:
         return UNKNOWN
-    if target=="respondents":
-        lo=hi=fraction
-    elif total is None:
-        lo,hi=0,1
-    else:
-        lo=n*fraction/total
-        hi=lo+Fraction(total-n,total)
+    lo, hi = identified_range(target, fraction, n, total)
     return verdict(claim[0] <= lo and hi <= claim[1])
 
 def survey_row(name, origin, split, target, fraction, claim, truth, cited=True, n=None, total=None):

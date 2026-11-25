@@ -24,6 +24,19 @@ class ReplayTests(unittest.TestCase):
         self.assertEqual(rows["target left implicit"]["revised"],"UNKNOWN")
         self.assertEqual(rows["n=7/k=2/missing=0/exact"]["revised"],"PASS")
 
+    def test_skill_matches_enumerated_population_counts(self):
+        from survey_bounds import evaluate
+        from fractions import Fraction
+        for n in (4, 7):
+            for affected in range(n+1):
+                for missing in (0, 1, 3):
+                    total = n + missing
+                    actual = [Fraction(k,total) for k in range(affected,affected+missing+1)]
+                    for low,high in [(0,1), (Fraction(1,2),Fraction(1,2)), (0,Fraction(1,3))]:
+                        matches = [low <= value <= high for value in actual]
+                        expected = "ENTAILED" if all(matches) else "UNDERDETERMINED" if any(matches) else "CONTRADICTED"
+                        self.assertEqual(evaluate(affected,n,total,(low,high))["status"],expected)
+
     def test_download_matches_classifications(self):
         downloaded=json.loads((w.HERE.parent/"site/witness-results.json").read_text(encoding="utf8"))
         computed=w.report()

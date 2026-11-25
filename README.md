@@ -27,6 +27,16 @@ The native Mach 5 replay compares two SU2 checkpoints. Both pass total mass chec
 | [The tests passed. The installed app stayed old](https://hengyuhang61-creator.github.io/solverfails/deployment.html) | A redacted historical handover and a synthetic version probe |
 | [The mass budget passed. The separation point kept moving](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html) | New SU2 restart holds at 7.20 mm of local drift despite low total mass error |
 
+## Audit a survey of your own
+
+The [survey-denominator skill](skills/survey-denominator/SKILL.md) accepts exact response counts and distinguishes entailed, contradicted and underdetermined population claims. Download the standalone skill ZIP from [v0.4.0](https://github.com/hengyuhang61-creator/solverfails/releases/tag/v0.4.0). Unpack its `survey-denominator` folder into your agent’s skills directory. The script also works directly with Python 3.9+.
+
+```sh
+python skills/survey-denominator/scripts/survey_bounds.py --affected 18 --respondents 100 --population 200 --claim-percent 18 18
+```
+
+These illustrative counts permit population rates from 9% to 59%. The actual clinic record reports only a percentage of respondents.
+
 ## Replay locally
 
 Use Node.js 24 or compatible. No npm installation is required.
