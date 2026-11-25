@@ -34,3 +34,17 @@ test("two hash-linked Mach 5 outputs pass the mass gate and fail local stationar
   assert.equal(result.driftMm.toFixed(2), "7.20");
   assert.equal(result.verdict, "HOLD_WALL_DRIFT");
 });
+
+test("sampling challenge retains positive, false-reject and shared-failure controls", async () => {
+  const {cases,evaluate,regression}=await import("./site/sampling.mjs");
+  const first=evaluate(cases[0],"interleaved");
+  assert.equal(first.accept,true);
+  assert.equal(first.accurate,false);
+  assert.equal(evaluate(cases[0],"staggered").accept,false);
+  assert.equal(evaluate(cases[1],"interleaved").accurate,true);
+  assert.equal(evaluate(cases[2],"staggered").accurate,true);
+  assert.equal(evaluate(cases[2],"staggered").accept,false);
+  assert.equal(evaluate(cases[3],"staggered").accept,true);
+  assert.equal(evaluate(cases[3],"staggered").accurate,false);
+  assert.match(regression(cases[0],"interleaved"),/def accepts/);
+});

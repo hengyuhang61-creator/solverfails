@@ -1,0 +1,49 @@
+{
+  "inputs": 7040,
+  "evaluationsPerDecision": 64,
+  "tolerance": 0.02,
+  "groups": {
+    "integer": {
+      "interleaved": {
+        "accurate": 3984,
+        "inaccurate": 112,
+        "falseAccept": 56,
+        "falseReject": 0
+      },
+      "staggered": {
+        "accurate": 3984,
+        "inaccurate": 112,
+        "falseAccept": 6,
+        "falseReject": 14
+      }
+    },
+    "resonance": {
+      "interleaved": {
+        "accurate": 240,
+        "inaccurate": 1680,
+        "falseAccept": 840,
+        "falseReject": 0
+      },
+      "staggered": {
+        "accurate": 240,
+        "inaccurate": 1680,
+        "falseAccept": 172,
+        "falseReject": 228
+      }
+    },
+    "half": {
+      "interleaved": {
+        "accurate": 654,
+        "inaccurate": 370,
+        "falseAccept": 12,
+        "falseReject": 48
+      },
+      "staggered": {
+        "accurate": 654,
+        "inaccurate": 370,
+        "falseAccept": 68,
+        "falseReject": 54
+      }
+    }
+  }
+}

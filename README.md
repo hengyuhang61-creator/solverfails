@@ -1,6 +1,8 @@
 # SolverFails
 
-**For verification reviewers: replay a passing signal that missed a real failure.**
+**Can you trust 64 samples?** [Play the sampling challenge](https://hengyuhang61-creator.github.io/solverfails/challenge.html). Accept or reject an estimate, reveal the curve, move the check samples and export a standalone Python regression. You can send a round to another reviewer using its share link.
+
+The equal-budget sweep contains 7,040 constructed inputs. Shifting the second grid reduces false accepts from 56 to 6 among the low integer frequencies but raises them from 12 to 68 among half-integer frequencies. Both checkers can accept a result wrong by one. Run `node challenge/sweep.mjs` to reproduce the counts or `python challenge/verify.py` for an independent geometric-series check. [Protocol and error denominators](challenge/PROTOCOL.md).
 
 [Open the grid and survey cases](site/witnesses.html) in a local checkout, or run the following command from the repository root. Python 3.9+ and its standard library are sufficient.
 

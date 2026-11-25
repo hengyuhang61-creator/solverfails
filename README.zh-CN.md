@@ -1,5 +1,7 @@
 # SolverFails
 
+[挑战：64 个采样点值得相信吗？](https://hengyuhang61-creator.github.io/solverfails/challenge.html) 先判断，再揭示曲线。可以更换验收采样位置、分享当前题目、导出独立可运行的 Python 检查。7,040 个构造输入按函数族分别统计，错相采样在半整数频率组出现了更多误收。
+
 本地打开 [网格外推与问卷分母案例](site/witnesses.html)，或在仓库根目录运行 `python replay/witness.py`（Python 3.9 及以上，标准库）。上游 Poiseuille 测试通过，外推误差却达到 0.00454193；两份真实模型回放引用了正确的问卷，却将 18% 的受访者写成了患者。
 
 运行 `python replay/witness.py summary` 查看原判据与新判据的错误接受、错误拒绝和弃判，`python replay/witness.py json` 导出逐条证据。页面同时保留了新判据也会误收的积分反例。可通过[投稿说明](CONTRIBUTING.md)提交一个公开链接、命令或标签纠错，并选择署名。

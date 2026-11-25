@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Make a call from 64 samples. Reveal the exact answer, move the sampling points and export a runnable regression.">
+<title>Can you trust 64 samples? · SolverFails</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="challenge.css">
+<script type="module" src="challenge-ui.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="bar"><a class="brand" href="index.html"><b>↳</b> SolverFails</a><nav><a href="witnesses.html">Evidence</a><a href="https://github.com/hengyuhang61-creator/solverfails">GitHub ↗</a></nav></header>
+<main id="main" class="challenge"><h1>Can you trust <em>64 samples?</em></h1><p class="lede">A program estimates the area under a hidden curve. You decide whether to sign off. Allowed error: ±0.02.</p>
+<div class="board"><section class="decision" aria-label="Review the estimate">
+<div class="stats"><div>Reported area<strong id="estimate">…</strong></div><div>Check samples<strong id="witness">…</strong></div></div>
+<p class="signal" id="signal" aria-live="polite"></p>
+<div class="controls" id="votes"><button id="ship" class="primary">Accept estimate</button><button id="hold">Reject estimate</button></div>
+<p id="feedback" role="status"></p>
+<div id="after" hidden><p id="truth"></p><label for="method">Place the second set of 32 points</label><select id="method"><option value="interleaved">Interleaved · half a cell</option><option value="staggered">Staggered · 0.382 cells</option></select><p id="audit"></p>
+<div class="controls"><button id="export">Export Python test ↓</button><button id="next">Next challenge →</button></div><a id="share" href="challenge.html">Share this challenge</a></div></section>
+<section class="scope" aria-label="Sample plot"><div class="plot-title"><h2>Inside one grid cell</h2><span>0 ≤ x ≤ 1/32</span></div><canvas id="curve" width="640" height="300" aria-label="First grid cell with primary and check samples"></canvas>
+<p class="legend"><i></i> Estimate points <b></b> Check point <span id="curve-key" hidden> · Line = revealed curve</span></p><p id="formula">The curve is hidden until you decide.</p></section></div>
+<details><summary>How the check works</summary><p>The estimate averages 32 equally spaced values on [0,1). A second set of 32 values checks it. Agreement within 0.02 gives a green signal. Each sampling rule gets exactly 64 evaluations. The analytical integral grades your choice after the reveal. These are constructed waveforms.</p>
+<p><a href="sampling-summary.json">Sweep results by input family</a> · <a href="https://github.com/hengyuhang61-creator/solverfails/blob/main/challenge/PROTOCOL.md">Inputs, oracle and reproduction</a> · <a href="witnesses.html#grid">Real passing upstream test</a></p></details>
+<noscript>Run <code>node challenge/sweep.mjs</code> in the source download to replay the benchmark without JavaScript in the browser.</noscript></main></body></html>
