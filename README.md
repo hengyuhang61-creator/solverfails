@@ -16,6 +16,8 @@ Run `python replay/witness.py summary` for false acceptances, false rejections a
 
 [Coordinate matching case](replay/COORDINATE_WITNESS.md) replays a pinned upstream comparison that gives zero error across different CFD stations, and shows when explicit identity and support allow a score.
 
+[Outlet traction case](replay/OUTLET_TRACTION.md) runs a standalone regression in which equal outlet mass flow hides an incorrect local transverse momentum update.
+
 The native Mach 5 replay compares two SU2 checkpoints. Both pass total mass checks while the separation point moves 7.20 mm. [Try the Mach 5 replay](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html).
 
 [Open the interactive casebook](https://hengyuhang61-creator.github.io/solverfails/) · [Release](https://github.com/hengyuhang61-creator/solverfails/releases/latest) · [Report an issue](https://github.com/hengyuhang61-creator/solverfails/issues/new) · [中文](README.zh-CN.md)

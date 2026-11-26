@@ -1,0 +1,32 @@
+{
+  "case": "SU2 8.6.0 manufactured planar shear",
+  "expected_mass_flow_kg_s_per_m_span": 11.200000000000001,
+  "analytic_missing_traction_rate_kg_m2_s2": -2000.0,
+  "local_rate_tolerance_kg_m2_s2": 20.0,
+  "results": {
+    "pressure": {
+      "mass_flow_kg_s_per_m_span": 11.200000000000001,
+      "mass_only_accepts": true,
+      "central_nodes": 9,
+      "min_transverse_rate_kg_m2_s2": -1999.9999999953423,
+      "max_transverse_rate_kg_m2_s2": -1999.9999999953352,
+      "mass_and_local_balance_accept": false
+    },
+    "supersonic": {
+      "mass_flow_kg_s_per_m_span": 11.200000000000001,
+      "mass_only_accepts": true,
+      "central_nodes": 9,
+      "min_transverse_rate_kg_m2_s2": 4.62607382956115e-09,
+      "max_transverse_rate_kg_m2_s2": 4.701967981635144e-09,
+      "mass_and_local_balance_accept": true
+    },
+    "uniform": {
+      "mass_flow_kg_s_per_m_span": 11.200000000000001,
+      "mass_only_accepts": true,
+      "central_nodes": 9,
+      "min_transverse_rate_kg_m2_s2": -3.9648284655413565e-11,
+      "max_transverse_rate_kg_m2_s2": 4.882735993305578e-11,
+      "mass_and_local_balance_accept": true
+    }
+  }
+}

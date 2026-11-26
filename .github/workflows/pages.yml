@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python replay/test_witness.py
+      - run: python replay/outlet_traction_witness.py
       - run: python challenge/verify.py
       - uses: actions/upload-pages-artifact@v3
         with:
