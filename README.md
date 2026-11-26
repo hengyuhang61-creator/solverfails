@@ -14,6 +14,8 @@ The released Poiseuille test accepts order 1.99973 while the reported continuum 
 
 Run `python replay/witness.py summary` for false acceptances, false rejections and abstentions, or `python replay/witness.py json` for individual inputs and decisions. Unpack a source download and open `site/witnesses.html` directly for the offline interactive page. [Experimental design](replay/DESIGN.md) · [Source replay and limitations](replay/README.md) · [Submit a public pointer and receive case credit](CONTRIBUTING.md).
 
+[Coordinate matching case](replay/COORDINATE_WITNESS.md) replays a pinned upstream comparison that gives zero error across different CFD stations, and shows when explicit identity and support allow a score.
+
 The native Mach 5 replay compares two SU2 checkpoints. Both pass total mass checks while the separation point moves 7.20 mm. [Try the Mach 5 replay](https://hengyuhang61-creator.github.io/solverfails/mach5-drift.html).
 
 [Open the interactive casebook](https://hengyuhang61-creator.github.io/solverfails/) · [Release](https://github.com/hengyuhang61-creator/solverfails/releases/latest) · [Report an issue](https://github.com/hengyuhang61-creator/solverfails/issues/new) · [中文](README.zh-CN.md)

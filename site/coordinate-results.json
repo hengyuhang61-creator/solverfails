@@ -1,0 +1,63 @@
+{
+  "suite_commit": "d428d076fad18b486947deb341bcf51773ecc24f",
+  "cases": {
+    "same_station": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 3,
+      "reference_points": 3,
+      "guarded": {
+        "status": "PASS",
+        "score": 0.0
+      }
+    },
+    "different_station": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 3,
+      "reference_points": 3,
+      "guarded": {
+        "status": "FAIL",
+        "reason": "disjoint station on x"
+      }
+    },
+    "missing_station": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 3,
+      "reference_points": 3,
+      "guarded": {
+        "status": "UNKNOWN",
+        "reason": "coordinate projection needs an explicit specification"
+      }
+    },
+    "different_axes_without_transform": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 3,
+      "reference_points": 3,
+      "guarded": {
+        "status": "UNKNOWN",
+        "reason": "coordinate projection needs an explicit specification"
+      }
+    },
+    "outside_support": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 3,
+      "reference_points": 3,
+      "guarded": {
+        "status": "FAIL",
+        "reason": "computed profile has incomplete support"
+      }
+    },
+    "nearest_many_to_one": {
+      "upstream_l2": 0.0,
+      "reported_pairs": 2,
+      "reference_points": 4,
+      "guarded": {
+        "status": "UNKNOWN",
+        "reason": "nonidentical clouds need a declared spatial matching rule"
+      },
+      "unique_reference_support": 1
+    },
+    "internal_positional_truncation_only": {
+      "equal_after_truncation": true
+    }
+  }
+}
